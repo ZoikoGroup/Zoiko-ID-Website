@@ -10,6 +10,23 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-manrope: var(--font-manrope-family);
+  --font-dm-serif: var(--font-dm-serif-display-family);
+
+  /* Zoiko ID design tokens */
+  --color-azure-8: #0a1520;
+  --color-azure-9: #071426;
+  --color-azure-11: #0a1e36;
+  --color-azure-13: #0c2541;
+  --color-azure-35: #444444;
+  --color-azure-47: #64748b;
+  --color-grey-91: #e2e8f0;
+  --color-grey-96: #f1f5f9;
+  --color-grey-98: #f8fafc;
+  --color-azure-48: #2563eb;
+  --color-azure-53: #3b82f6;
+  --color-cyan-49: #22b8d6;
+  --color-white-solid: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
