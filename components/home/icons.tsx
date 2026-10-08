@@ -324,6 +324,126 @@ export function BoltIcon({ size }: IconProps) {
   );
 }
 
+export function ArrowRightIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M5 12H19M13 6L19 12L13 18" strokeWidth="2" />
+    </Icon>
+  );
+}
+
+export function PhoneIcon({ size }: IconProps) {
+  return (
+    <svg
+      width={size ?? 24}
+      height={size ?? 24}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.4 15C17.5 15.4 18.7 15.6 20 15.6C20.6 15.6 21 16 21 16.6V20C21 20.6 20.6 21 20 21C10.6 21 3 13.4 3 4C3 3.4 3.4 3 4 3H7.5C8.1 3 8.5 3.4 8.5 4C8.5 5.3 8.7 6.5 9.1 7.6C9.2 7.9 9.1 8.3 8.9 8.6L6.6 10.8Z" />
+    </svg>
+  );
+}
+
+export function ShieldCheckIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M12 2.5L4.5 5.5V11C4.5 15.6 7.7 19.8 12 21.5C16.3 19.8 19.5 15.6 19.5 11V5.5L12 2.5Z" fill="currentColor" />
+      <path d="M8.75 12L11 14.25L15.5 9.75" stroke="#FFFFFF" strokeWidth="2" />
+    </Icon>
+  );
+}
+
+export function PersonIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <circle cx="12" cy="8" r="3.5" fill="currentColor" stroke="none" />
+      <path d="M5 19.5C5 16.2 8.1 14 12 14C15.9 14 19 16.2 19 19.5V20H5V19.5Z" fill="currentColor" stroke="none" />
+    </Icon>
+  );
+}
+
+export function BuildingIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <rect x="5.5" y="3" width="13" height="18" rx="1" fill="currentColor" stroke="none" />
+      <path
+        d="M8.5 6.5H9.5M11.5 6.5H12.5M14.5 6.5H15.5M8.5 10H9.5M11.5 10H12.5M14.5 10H15.5M8.5 13.5H9.5M11.5 13.5H12.5M14.5 13.5H15.5M11 21V17.5H13V21"
+        stroke="#FFFFFF"
+        strokeWidth="1.5"
+      />
+    </Icon>
+  );
+}
+
+export function GearIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path
+        d="M10.3 2.5H13.7L14.2 5.1C14.9 5.4 15.5 5.7 16 6.2L18.5 5.3L20.2 8.2L18.2 9.9C18.3 10.6 18.3 11.4 18.2 12.1L20.2 13.8L18.5 16.7L16 15.8C15.5 16.3 14.9 16.6 14.2 16.9L13.7 19.5H10.3L9.8 16.9C9.1 16.6 8.5 16.3 8 15.8L5.5 16.7L3.8 13.8L5.8 12.1C5.7 11.4 5.7 10.6 5.8 9.9L3.8 8.2L5.5 5.3L8 6.2C8.5 5.7 9.1 5.4 9.8 5.1L10.3 2.5Z"
+        fill="currentColor"
+        stroke="none"
+        transform="translate(0 1)"
+      />
+      <circle cx="12" cy="12" r="2.75" fill="#FFFFFF" stroke="none" />
+    </Icon>
+  );
+}
+
+export function LaptopIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <rect x="4.5" y="5" width="15" height="10.5" rx="1.25" strokeWidth="2" />
+      <path d="M2.5 19H21.5" strokeWidth="2" />
+    </Icon>
+  );
+}
+
+export function RobotIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M12 3.5V6.5" strokeWidth="2" />
+      <circle cx="12" cy="3" r="1.25" fill="currentColor" stroke="none" />
+      <rect x="4.5" y="7" width="15" height="12" rx="4" fill="currentColor" stroke="none" />
+      <circle cx="9.25" cy="13" r="1.5" fill="#FFFFFF" stroke="none" />
+      <circle cx="14.75" cy="13" r="1.5" fill="#FFFFFF" stroke="none" />
+      <path d="M2.5 11.5V14.5M21.5 11.5V14.5" strokeWidth="2" />
+    </Icon>
+  );
+}
+
+export function LockCheckIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M7 10V7.5C7 4.7 9.2 2.5 12 2.5C14.8 2.5 17 4.7 17 7.5V10" strokeWidth="2" />
+      <path d="M13.5 21H6C5.2 21 4.5 20.3 4.5 19.5V11.5C4.5 10.7 5.2 10 6 10H18C18.8 10 19.5 10.7 19.5 11.5V14" fill="currentColor" stroke="none" />
+      <circle cx="10" cy="15" r="1.5" fill="#FFFFFF" stroke="none" />
+      <path d="M15 19L17 21L21 17" />
+    </Icon>
+  );
+}
+
+export function EyeCheckIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M12 5.5C7.5 5.5 4 8.5 2 12C4 15.5 7.5 18.5 12 18.5C12.7 18.5 13.3 18.4 14 18.3V15.3C13.4 15.7 12.7 16 12 16C9.8 16 8 14.2 8 12C8 9.8 9.8 8 12 8C14.2 8 16 9.8 16 12C16 12.4 15.9 12.9 15.8 13.3H19.6C20.5 12.9 21.3 12.5 22 12C20 8.5 16.5 5.5 12 5.5Z" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
+      <path d="M16 18L18 20L22 16" />
+    </Icon>
+  );
+}
+
+export function ScaleIcon({ size }: IconProps) {
+  return (
+    <Icon size={size}>
+      <path d="M12 3.5V19.5M5 20.5H19M5.5 6.5H18.5M12 6.5V3.5" />
+      <path d="M5.5 6.5L3 12.5C3 14 4.1 15 5.5 15C6.9 15 8 14 8 12.5L5.5 6.5ZM18.5 6.5L16 12.5C16 14 17.1 15 18.5 15C19.9 15 21 14 21 12.5L18.5 6.5Z" />
+      <path d="M3 12.5H8M16 12.5H21" />
+    </Icon>
+  );
+}
+
 export function PlusIcon({ size }: IconProps) {
   return (
     <Icon size={size}>

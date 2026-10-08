@@ -41,13 +41,17 @@ export function SectionHeader({
   title,
   subtitle,
   dark = false,
+  widthClass = "max-w-[700px]",
 }: {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   dark?: boolean;
+  widthClass?: string;
 }) {
   return (
-    <div className="flex w-full max-w-[700px] flex-col items-center gap-5 text-center">
+    <div
+      className={`flex w-full flex-col items-center gap-5 text-center ${widthClass}`}
+    >
       <h2
         className={`font-dm-serif text-4xl font-normal leading-tight sm:text-5xl sm:leading-[59.8px] ${
           dark ? "text-white-solid" : "text-azure-9"
@@ -55,13 +59,15 @@ export function SectionHeader({
       >
         {title}
       </h2>
-      <p
-        className={`font-manrope text-base font-normal leading-7 ${
-          dark ? "text-white-solid" : "text-azure-35"
-        }`}
-      >
-        {subtitle}
-      </p>
+      {subtitle && (
+        <p
+          className={`font-manrope text-base font-normal leading-7 ${
+            dark ? "text-white-solid" : "text-azure-35"
+          }`}
+        >
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }

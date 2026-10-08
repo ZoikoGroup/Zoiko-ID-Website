@@ -118,6 +118,11 @@ const footerColumns: FooterColumn[] = [
   },
 ];
 
+// Footer links that already have a page; the rest point to "#" for now
+const footerRoutes: Record<string, string> = {
+  "About Zoiko iD": "/about-us",
+};
+
 const offices = [
   {
     title: "Headquarters (United States)",
@@ -258,7 +263,7 @@ export default function Footer() {
           FOOTER NAVIGATION
       ========================================================= */}
       <section className="border-b border-white-solid/20">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-x-6 gap-y-12 px-6 py-12 sm:grid-cols-3 sm:px-10 lg:grid-cols-4 lg:gap-y-16 lg:px-16 xl:grid-cols-6 xl:gap-y-20 xl:px-28">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-x-6 gap-y-12 px-6 py-12 sm:px-10 md:grid-cols-4 lg:gap-y-16 lg:px-16 xl:grid-cols-6 xl:gap-y-20 xl:px-28">
           {footerColumns.map((column) => (
             <div key={column.title} className="flex min-w-0 flex-col gap-5">
               <h3 className="font-dm-serif text-sm font-normal capitalize tracking-tight text-white-solid">
@@ -269,7 +274,7 @@ export default function Footer() {
                 {column.links.map((link) => (
                   <li key={link} className="pb-0.5 pt-[1.5px]">
                     <Link
-                      href="#"
+                      href={footerRoutes[link] ?? "#"}
                       className="text-sm font-normal leading-5 text-white-solid/96 transition-colors duration-200 hover:text-cyan-49"
                     >
                       {link}
@@ -318,11 +323,12 @@ export default function Footer() {
             <p>© 2026 Zoiko Tech Inc. All rights reserved.</p>
           </div>
 
-          <ul className="flex flex-wrap items-center justify-center gap-3 text-sm font-normal leading-5 text-white-solid/96">
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm lg:gap-3 font-normal leading-5 text-white-solid/96">
             {legalLinks.map((link, index) => (
               <li key={link} className="flex items-center gap-3">
                 {index > 0 && (
-                  <span aria-hidden="true" className="w-4 text-center">
+                  // Separators only when the links fit on one line
+                  <span aria-hidden="true" className="hidden w-4 text-center lg:inline-block">
                     •
                   </span>
                 )}
