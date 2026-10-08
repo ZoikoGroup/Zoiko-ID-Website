@@ -262,7 +262,7 @@ const pricingMenu: MegaMenu = {
   },
 };
 
-export const navigationItems: NavigationItem[] = [
+const navigationItems: NavigationItem[] = [
   { label: "Platform", href: "#", menu: platformMenu },
   { label: "Solution", href: "#", menu: solutionMenu },
   { label: "Developers", href: "#", menu: developersMenu },
@@ -504,7 +504,7 @@ function Logo() {
   );
 }
 
-export function MegaMenuPanel({
+function MegaMenuPanel({
   id,
   menu,
   onNavigate,
