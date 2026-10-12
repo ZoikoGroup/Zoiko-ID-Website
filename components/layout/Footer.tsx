@@ -121,6 +121,9 @@ const footerColumns: FooterColumn[] = [
 // Footer links that already have a page; the rest point to "#" for now
 const footerRoutes: Record<string, string> = {
   "About Zoiko iD": "/about-us",
+  "Organization Identity": "/organization-identity",
+  "Authentication & SSO": "/authentication-sso",
+  "APIs & Integrations": "/apis-integrations",
 };
 
 const offices = [
