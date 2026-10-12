@@ -35,7 +35,7 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "ZoikoAssure",
+  title: "Zoiko iD | Enterprise Identity & Access Infrastructure",
   description:
     "Global regulatory intelligence and continuous assurance.",
 };
