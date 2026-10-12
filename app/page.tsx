@@ -1,3 +1,6 @@
+
+import type { Metadata } from "next";
+
 import ActorsSection from "@/components/home/ActorsSection";
 import ComplianceSection from "@/components/home/ComplianceSection";
 import CoreCapabilitiesSection from "@/components/home/CoreCapabilitiesSection";
@@ -17,6 +20,12 @@ import ResourcesSection from "@/components/home/ResourcesSection";
 import TrustedAtScaleSection from "@/components/home/TrustedAtScaleSection";
 import TrustLifecycleSection from "@/components/home/TrustLifecycleSection";
 import WhatWeDoSection from "@/components/home/WhatWeDoSection";
+
+export const metadata: Metadata = {
+  title: "Zoiko iD | Enterprise Identity & Access Infrastructure",
+  description:
+    "Zoiko iD unifies authentication, verifiable credentials, consent, access governance and AI identity through secure, API-first enterprise infrastructure.",
+};
 
 // The root layout already wraps pages in <main>
 export default function HomePage() {
