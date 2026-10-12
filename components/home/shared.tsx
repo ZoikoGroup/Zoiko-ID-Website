@@ -11,6 +11,7 @@ export const secondaryButtonClass =
 const backgrounds = {
   white: "bg-white-solid",
   grey: "bg-grey-98",
+  slate: "bg-grey-96",
   none: "",
 };
 
@@ -69,6 +70,69 @@ export function SectionHeader({
         </p>
       )}
     </div>
+  );
+}
+
+// Tinted, outlined card with a centred heading and body copy ("What is …?")
+export function CalloutSection({
+  title,
+  children,
+}: {
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section className="bg-white-solid px-6 py-12 sm:px-10 lg:px-20">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col items-center gap-8 rounded-2xl bg-cyan-500/5 px-6 pb-12 pt-10 outline-1 -outline-offset-1 outline-cyan-500/40 sm:px-8 lg:min-h-96 lg:justify-center lg:gap-10">
+        <h2 className="text-balance text-center font-dm-serif text-4xl font-normal leading-tight text-azure-9 sm:text-5xl sm:leading-[1.2]">
+          {title}
+        </h2>
+
+        <div className="flex max-w-[860px] flex-col gap-3.5 text-center font-manrope text-base font-normal leading-7 text-azure-35">
+          {children}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Hairline between sections that fades out at both edges
+export function SectionDivider() {
+  return (
+    <div
+      aria-hidden="true"
+      className="h-px w-full bg-linear-to-r from-grey-91/0 via-grey-91 to-grey-91/0"
+    />
+  );
+}
+
+export type IconRowItem = {
+  title: string;
+  description: string;
+  icon: ReactNode;
+};
+
+// Grid of cards with the icon tile on the left and text on the right
+export function IconRowCardGrid({ items }: { items: IconRowItem[] }) {
+  return (
+    <ul className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {items.map((item) => (
+        <li
+          key={item.title}
+          className="flex items-start gap-5 rounded-xl bg-white-solid p-7 outline-1 -outline-offset-1 outline-grey-91"
+        >
+          <IconTile className="size-14 rounded-lg">{item.icon}</IconTile>
+          <div className="flex flex-col gap-3">
+            <h3 className="font-manrope text-base font-bold text-azure-9">
+              {item.title}
+            </h3>
+            <p className="font-manrope text-base font-normal leading-7 text-azure-47">
+              {item.description}
+            </p>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 

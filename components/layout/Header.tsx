@@ -44,10 +44,10 @@ const platformMenu: MegaMenu = {
       heading: "Core Identity",
       links: [
         { label: "Platform overview", href: "#" },
-        { label: "Authentication & SSO", href: "#" },
+        { label: "Authentication & SSO", href: "/authentication-sso" },
         { label: "Identity Verification", href: "#" },
         { label: "Credentials", href: "#" },
-        { label: "Organization Identity", href: "#" },
+        { label: "Organization Identity", href: "/organization-identity" },
       ],
     },
     {
@@ -61,7 +61,7 @@ const platformMenu: MegaMenu = {
     {
       heading: "Build & Connect",
       links: [
-        { label: "APIs & Integrations", href: "#" },
+        { label: "APIs & Integrations", href: "/apis-integrations" },
         { label: "Standards & Interoperability", href: "#" },
         { label: "Architecture Overview", href: "#" },
         { label: "Evidence & Audit", href: "#" },

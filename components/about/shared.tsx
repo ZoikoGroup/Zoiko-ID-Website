@@ -9,23 +9,45 @@ const solidClass =
 const outlineClass =
   "inline-flex items-center gap-2 rounded-md px-6 py-3 font-manrope text-base font-semibold text-white-solid outline-1 -outline-offset-1 outline-white-solid transition-colors duration-200 hover:bg-white-solid/10";
 
+// Button-style link with a leading icon, for use on dark backgrounds
+export function ActionLink({
+  href = "#",
+  variant = "solid",
+  icon,
+  children,
+}: {
+  href?: string;
+  variant?: "solid" | "outline";
+  icon: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <Link href={href} className={variant === "solid" ? solidClass : outlineClass}>
+      {icon}
+      {children}
+    </Link>
+  );
+}
+
 // "Explore the platform" + "Talk to an expert"; `expertFirst` swaps which is solid
 export function CtaButtons({ expertFirst = false }: { expertFirst?: boolean }) {
   const explore = (
-    <Link
+    <ActionLink
       key="explore"
-      href="#"
-      className={expertFirst ? outlineClass : solidClass}
+      variant={expertFirst ? "outline" : "solid"}
+      icon={<ArrowRightIcon size={16} />}
     >
-      <ArrowRightIcon size={16} />
       Explore the platform
-    </Link>
+    </ActionLink>
   );
   const expert = (
-    <Link key="expert" href="#" className={expertFirst ? solidClass : outlineClass}>
-      <PhoneIcon size={16} />
+    <ActionLink
+      key="expert"
+      variant={expertFirst ? "solid" : "outline"}
+      icon={<PhoneIcon size={16} />}
+    >
       Talk to an expert
-    </Link>
+    </ActionLink>
   );
 
   return (
