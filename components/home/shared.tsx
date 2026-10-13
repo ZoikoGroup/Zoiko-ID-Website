@@ -101,7 +101,7 @@ export function SectionDivider() {
   return (
     <div
       aria-hidden="true"
-      className="h-px w-full bg-linear-to-r from-grey-91/0 via-grey-91 to-grey-91/0"
+      className="h-px w-full bg-[linear-gradient(90deg,rgba(226,232,240,0)_0%,rgba(226,232,240,1)_50%,rgba(226,232,240,0)_100%)]"
     />
   );
 }
