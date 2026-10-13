@@ -88,14 +88,14 @@ const solutionMenu: MegaMenu = {
     {
       heading: "Customer & Workforce",
       links: [
-        { label: "Customer & User Access", href: "#" },
+        { label: "Customer & User Access", href: "/customer-user-access" },
         { label: "Workforce & Enterprise Access", href: "#" },
       ],
     },
     {
       heading: "Business & Delegation",
       links: [
-        { label: "B2B / SaaS Identity", href: "#" },
+        { label: "B2B / SaaS Identity", href: "/b2b-saas" },
         { label: "Verified Onboarding", href: "#" },
         { label: "Delegated Third-Party Access", href: "#" },
       ],
@@ -706,6 +706,7 @@ export default function Header() {
                 >
                   <button
                     type="button"
+                    suppressHydrationWarning
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpenMenu(isOpen ? null : item.label)}
@@ -772,6 +773,7 @@ export default function Header() {
             {/* Menu Button */}
             <button
               type="button"
+              suppressHydrationWarning
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
               onClick={() => (mobileOpen ? closeMobile() : setMobileOpen(true))}
@@ -814,6 +816,7 @@ export default function Header() {
                   >
                     <button
                       type="button"
+                      suppressHydrationWarning
                       aria-expanded={isExpanded}
                       aria-controls={panelId}
                       onClick={() =>

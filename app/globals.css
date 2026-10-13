@@ -27,6 +27,8 @@
   --color-azure-53: #3b82f6;
   --color-cyan-49: #22b8d6;
   --color-white-solid: #ffffff;
+  --color-geyser: #cbd5e1;
+  --color-mystic: #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
