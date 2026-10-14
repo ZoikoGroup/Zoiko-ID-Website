@@ -89,7 +89,7 @@ const solutionMenu: MegaMenu = {
       heading: "Customer & Workforce",
       links: [
         { label: "Customer & User Access", href: "/customer-user-access" },
-        { label: "Workforce & Enterprise Access", href: "#" },
+        { label: "Workforce & Enterprise Access", href: "/workforce-enterprise" },
       ],
     },
     {
@@ -103,7 +103,7 @@ const solutionMenu: MegaMenu = {
     {
       heading: "Emerging Trust",
       links: [
-        { label: "AI Agent Security", href: "#" },
+        { label: "AI Agent Security", href: "/ai-agent-security" },
         { label: "Regulated Services", href: "#" },
       ],
     },
