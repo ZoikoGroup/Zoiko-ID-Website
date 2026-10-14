@@ -59,7 +59,7 @@ export default function EvidenceExplainabilitySection() {
           {/* Right card: What We Don't Show */}
           <div className="flex flex-col gap-5 rounded-xl border border-cyan-49 bg-linear-to-br from-cyan-49/[0.05] to-azure-48/[0.03] p-7 sm:p-8 backdrop-blur-sm">
             <h3 className="font-manrope text-[16.8px] font-bold text-cyan-49">
-              What We Don't Show
+              What We Don&apos;t Show
             </h3>
 
             <ul className="flex flex-col gap-2.5">

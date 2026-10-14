@@ -31,7 +31,7 @@ const triggers = [
     title: "Role Changed",
     description: (
       <>
-        User's role changes. New
+        User&apos;s role changes. New
         <br />
         permissions take effect.
         <br />

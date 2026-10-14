@@ -9,7 +9,7 @@ const useCases = [
         <br />
         and team members to access their
         <br />
-        org's data and resources.
+        org&apos;s data and resources.
         <br />
         Controlled invitation and role-
         <br />
@@ -25,7 +25,7 @@ const useCases = [
       <>
         Partner or manager needs to
         <br />
-        manage a customer's account on
+        manage a customer&apos;s account on
         <br />
         their behalf. Scoped, auditable,
         <br />
@@ -39,7 +39,7 @@ const useCases = [
     title: "Enterprise Federation",
     description: (
       <>
-        Customer's Okta or Azure AD drives
+        Customer&apos;s Okta or Azure AD drives
         <br />
         authentication. Zoiko iD adds
         <br />

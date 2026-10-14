@@ -45,7 +45,7 @@ export default function EnterpriseSsoSection() {
             </h3>
 
             <p className="font-manrope text-base font-normal leading-7 text-[#475569]">
-              Your customer's identity provider (Okta, Azure AD, Ping) remains
+              Your customer&apos;s identity provider (Okta, Azure AD, Ping) remains
               <br className="hidden sm:inline" />
               the source of truth. Zoiko iD receives authenticated identity
               <br className="hidden sm:inline" />
