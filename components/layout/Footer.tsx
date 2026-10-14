@@ -126,6 +126,8 @@ const footerRoutes: Record<string, string> = {
   "APIs & Integrations": "/apis-integrations",
   "Customer & User Access": "/customer-user-access",
   "B2B / SaaS Identity": "/b2b-saas",
+  "Workforce & Enterprise Access": "/workforce-enterprise",
+  "AI Agent Security": "/ai-agent-security",
 };
 
 const offices = [
