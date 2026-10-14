@@ -97,7 +97,7 @@ const solutionMenu: MegaMenu = {
       links: [
         { label: "B2B / SaaS Identity", href: "/b2b-saas" },
         { label: "Verified Onboarding", href: "#" },
-        { label: "Delegated Third-Party Access", href: "#" },
+        { label: "Delegated Third-Party Access", href: "/third-party-access" },
       ],
     },
     {
@@ -128,8 +128,8 @@ const developersMenu: MegaMenu = {
     {
       heading: "Start Building",
       links: [
-        { label: "Developer overview", href: "#" },
-        { label: "Quickstarts", href: "#" },
+        { label: "Developer overview", href: "/overview" },
+        { label: "Quickstarts", href: "/quickstarts" },
         { label: "API Reference", href: "#" },
         { label: "SDKs", href: "#" },
       ],
