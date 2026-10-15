@@ -130,6 +130,9 @@ const footerRoutes: Record<string, string> = {
   "AI Agent Security": "/ai-agent-security",
   "Quickstarts": "/quickstarts",
   "Developer overview": "/overview",
+  "Webhooks & Events": "/webhooks-events",
+  "Evidence & Audit": "/reports",
+  "Compliance & Standards": "/reports",
 };
 
 const offices = [
