@@ -133,6 +133,11 @@ const footerRoutes: Record<string, string> = {
   "Webhooks & Events": "/webhooks-events",
   "Evidence & Audit": "/reports",
   "Compliance & Standards": "/reports",
+  "Delegated Third-Party Access": "/third-party-access",
+  "Verified Onboarding": "/solutions-verified-onboarding",
+  "Regulated Services": "/solutions-regulated-services",
+  "Changelog": "/changelog",
+  "Sandbox": "/sandbox",
 };
 
 const offices = [
