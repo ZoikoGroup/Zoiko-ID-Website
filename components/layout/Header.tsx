@@ -96,7 +96,7 @@ const solutionMenu: MegaMenu = {
       heading: "Business & Delegation",
       links: [
         { label: "B2B / SaaS Identity", href: "/b2b-saas" },
-        { label: "Verified Onboarding", href: "#" },
+        { label: "Verified Onboarding", href: "/solutions-verified-onboarding" },
         { label: "Delegated Third-Party Access", href: "/third-party-access" },
       ],
     },
@@ -104,7 +104,8 @@ const solutionMenu: MegaMenu = {
       heading: "Emerging Trust",
       links: [
         { label: "AI Agent Security", href: "/ai-agent-security" },
-        { label: "Regulated Services", href: "#" },
+        { label: "AI Solutions", href: "/solutions-ai-solutions" },
+        { label: "Regulated Services", href: "/solutions-regulated-services" },
       ],
     },
   ],
@@ -139,8 +140,8 @@ const developersMenu: MegaMenu = {
       links: [
         { label: "Webhooks & Events", href: "#" },
         { label: "Integrations", href: "#" },
-        { label: "Sandbox", href: "#" },
-        { label: "Changelog", href: "#" },
+        { label: "Sandbox", href: "/sandbox" },
+        { label: "Changelog", href: "/changelog" },
       ],
     },
     {
