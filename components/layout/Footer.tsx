@@ -130,6 +130,11 @@ const footerRoutes: Record<string, string> = {
   "AI Agent Security": "/ai-agent-security",
   "Quickstarts": "/quickstarts",
   "Developer overview": "/overview",
+  "Delegated Third-Party Access": "/third-party-access",
+  "Verified Onboarding": "/solutions-verified-onboarding",
+  "Regulated Services": "/solutions-regulated-services",
+  "Changelog": "/changelog",
+  "Sandbox": "/sandbox",
 };
 
 const offices = [
