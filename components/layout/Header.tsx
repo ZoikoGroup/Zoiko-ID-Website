@@ -64,7 +64,7 @@ const platformMenu: MegaMenu = {
         { label: "APIs & Integrations", href: "/apis-integrations" },
         { label: "Standards & Interoperability", href: "#" },
         { label: "Architecture Overview", href: "#" },
-        { label: "Evidence & Audit", href: "#" },
+        { label: "Evidence & Audit", href: "/reports" },
       ],
     },
   ],
@@ -138,7 +138,7 @@ const developersMenu: MegaMenu = {
     {
       heading: "Integrate & Operate",
       links: [
-        { label: "Webhooks & Events", href: "#" },
+        { label: "Webhooks & Events", href: "/webhooks-events" },
         { label: "Integrations", href: "#" },
         { label: "Sandbox", href: "/sandbox" },
         { label: "Changelog", href: "/changelog" },
