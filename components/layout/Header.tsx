@@ -182,7 +182,7 @@ const trustMenu: MegaMenu = {
     {
       heading: "Operations",
       links: [
-        { label: "Trust Center", href: "#" },
+        { label: "Trust Center", href: "/trust-center" },
         { label: "Availability / Status", href: "#" },
         { label: "Security Advisories", href: "#" },
       ],
@@ -196,7 +196,7 @@ const trustMenu: MegaMenu = {
     title: "Trust Center",
     description:
       "Security posture, verified attestations, independent certifications, and governance documentation.",
-    cta: { label: "Explore Trust Center →", href: "#" },
+    cta: { label: "Explore Trust Center →", href: "/trust-center" },
     image: {
       src: "/dropdowns/trust-center.webp",
       alt: "Business partners joining hands",
