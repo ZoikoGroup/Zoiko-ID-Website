@@ -1,0 +1,12 @@
+export { default as IdentityHero } from "./IdentityHero";
+export { default as IdentitySteps } from "./IdentitySteps";
+export { default as GuideCards } from "./GuideCards";
+export { default as IdentitySearchFilter } from "./IdentitySearchFilter";
+export { default as IdentityWorkflow } from "./IdentityWorkflow";
+export { default as FiveActors } from "./FiveActors";
+export { default as AuditabilitySection } from "./AuditabilitySection";
+export { default as MandateAccess } from "./MandateAccess";
+export { default as ThreeChecks } from "./ThreeChecks";
+export { default as TechnicalOwners } from "./TechnicalOwners";
+export { default as IdentityFAQ } from "./IdentityFAQ";
+export { default as KeepLearningBanner } from "./KeepLearningBanner";

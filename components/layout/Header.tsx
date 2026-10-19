@@ -212,7 +212,7 @@ const resourcesMenu: MegaMenu = {
     {
       heading: "Learn",
       links: [
-        { label: "Identity Guides", href: "#" },
+        { label: "Identity Guides", href: "/identity-guides" },
         { label: "Delegated Authority Explainers", href: "#" },
         { label: "Machine & Agent Guides", href: "#" },
       ],
@@ -220,7 +220,7 @@ const resourcesMenu: MegaMenu = {
     {
       heading: "Deep Dive",
       links: [
-        { label: "Architecture Guides", href: "#" },
+        { label: "Architecture Guides", href: "/architecture-guides" },
         { label: "Research", href: "#" },
         { label: "Updates", href: "#" },
       ],
