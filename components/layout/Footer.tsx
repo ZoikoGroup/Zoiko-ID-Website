@@ -138,6 +138,7 @@ const footerRoutes: Record<string, string> = {
   "Regulated Services": "/solutions-regulated-services",
   "Changelog": "/changelog",
   "Sandbox": "/sandbox",
+  "Delegated Authority Explainers": "/authority-explainers",
 };
 
 const offices = [
