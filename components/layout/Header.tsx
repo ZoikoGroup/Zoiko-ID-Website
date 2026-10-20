@@ -182,7 +182,7 @@ const trustMenu: MegaMenu = {
     {
       heading: "Operations",
       links: [
-        { label: "Trust Center", href: "#" },
+        { label: "Trust Center", href: "/trust-center" },
         { label: "Availability / Status", href: "#" },
         { label: "Security Advisories", href: "#" },
       ],
@@ -196,7 +196,7 @@ const trustMenu: MegaMenu = {
     title: "Trust Center",
     description:
       "Security posture, verified attestations, independent certifications, and governance documentation.",
-    cta: { label: "Explore Trust Center →", href: "#" },
+    cta: { label: "Explore Trust Center →", href: "/trust-center" },
     image: {
       src: "/dropdowns/trust-center.webp",
       alt: "Business partners joining hands",
@@ -212,7 +212,7 @@ const resourcesMenu: MegaMenu = {
     {
       heading: "Learn",
       links: [
-        { label: "Identity Guides", href: "#" },
+        { label: "Identity Guides", href: "/identity-guides" },
         { label: "Delegated Authority Explainers", href: "/authority-explainers" },
         { label: "Machine & Agent Guides", href: "#" },
       ],
@@ -220,7 +220,7 @@ const resourcesMenu: MegaMenu = {
     {
       heading: "Deep Dive",
       links: [
-        { label: "Architecture Guides", href: "#" },
+        { label: "Architecture Guides", href: "/architecture-guides" },
         { label: "Research", href: "#" },
         { label: "Updates", href: "#" },
       ],

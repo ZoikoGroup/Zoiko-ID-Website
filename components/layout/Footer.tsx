@@ -139,6 +139,9 @@ const footerRoutes: Record<string, string> = {
   "Changelog": "/changelog",
   "Sandbox": "/sandbox",
   "Delegated Authority Explainers": "/authority-explainers",
+  "Identity Guides": "/identity-guides",
+  "Architecture Guides": "/architecture-guides",
+  "Security Advisories": "/security-advisories",
 };
 
 const offices = [
