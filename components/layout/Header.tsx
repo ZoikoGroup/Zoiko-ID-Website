@@ -213,7 +213,7 @@ const resourcesMenu: MegaMenu = {
       heading: "Learn",
       links: [
         { label: "Identity Guides", href: "/identity-guides" },
-        { label: "Delegated Authority Explainers", href: "#" },
+        { label: "Delegated Authority Explainers", href: "/authority-explainers" },
         { label: "Machine & Agent Guides", href: "#" },
       ],
     },
