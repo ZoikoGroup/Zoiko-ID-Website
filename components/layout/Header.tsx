@@ -252,8 +252,8 @@ const pricingMenu: MegaMenu = {
   columns: [
     {
       links: [
-        { label: "Pricing overview", href: "#" },
-        { label: "Enterprise", href: "#" },
+        { label: "Pricing overview", href: "/pricing-overview" },
+        { label: "Enterprise", href: "/enterprise" },
         { label: "Platform & usage model", href: "#" },
       ],
     },
