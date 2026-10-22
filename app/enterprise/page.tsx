@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 
-import EnterpriseHeroSection from "@/components/enterprise/EnterpriseHeroSection";
-import AuthenticateNotAuthorizeSection from "@/components/enterprise/AuthenticateNotAuthorizeSection";
-import FiveDistinctNodesSection from "@/components/enterprise/FiveDistinctNodesSection";
-import ExistingSystemsAuthoritativeSection from "@/components/enterprise/ExistingSystemsAuthoritativeSection";
-import StartFromTeamQuestionSection from "@/components/enterprise/StartFromTeamQuestionSection";
-import FiveConceptualGatesSection from "@/components/enterprise/FiveConceptualGatesSection";
-import WhatTheEnquiryAsksSection from "@/components/enterprise/WhatTheEnquiryAsksSection";
-import EnterpriseFaqSection from "@/components/enterprise/EnterpriseFaqSection";
-import EnterpriseCtaSection from "@/components/enterprise/EnterpriseCtaSection";
+import DesktopPart1 from "@/components/enterprise/DesktopPart1";
+import DesktopPart2 from "@/components/enterprise/DesktopPart2";
+import DesktopPart3 from "@/components/enterprise/DesktopPart3";
+import DesktopPart4 from "@/components/enterprise/DesktopPart4";
+import MobilePart1 from "@/components/enterprise/MobilePart1";
+import MobilePart2 from "@/components/enterprise/MobilePart2";
+import MobilePart3 from "@/components/enterprise/MobilePart3";
 
 export const metadata: Metadata = {
   title: "Enterprise | Identity, Authority and Evidence | Zoiko iD",
@@ -18,16 +16,21 @@ export const metadata: Metadata = {
 
 export default function EnterprisePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <EnterpriseHeroSection />
-      <AuthenticateNotAuthorizeSection />
-      <FiveDistinctNodesSection />
-      <ExistingSystemsAuthoritativeSection />
-      <StartFromTeamQuestionSection />
-      <FiveConceptualGatesSection />
-      <WhatTheEnquiryAsksSection />
-      <EnterpriseFaqSection />
-      <EnterpriseCtaSection />
-    </main>
+    <>
+      {/* Desktop design (>= lg) */}
+      <div className="hidden lg:block">
+        <DesktopPart1 />
+        <DesktopPart2 />
+        <DesktopPart3 />
+        <DesktopPart4 />
+      </div>
+
+      {/* Mobile design (< lg) */}
+      <div className="lg:hidden">
+        <MobilePart1 />
+        <MobilePart2 />
+        <MobilePart3 />
+      </div>
+    </>
   );
 }
