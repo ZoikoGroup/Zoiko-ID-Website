@@ -1,0 +1,16 @@
+export { default as TermsHeroSection } from "./TermsHeroSection";
+export { default as TermsScopeMetadataSection } from "./TermsScopeMetadataSection";
+export { default as TermsClausesSection } from "./TermsClausesSection";
+export { default as TermsRelatedNoticesSection } from "./TermsRelatedNoticesSection";
+export { default as TermsVersionsSection } from "./TermsVersionsSection";
+export { default as TermsPrintShareSection } from "./TermsPrintShareSection";
+export { default as TermsQuestionsSection } from "./TermsQuestionsSection";
+export { default as TermsPublicationGateSection } from "./TermsPublicationGateSection";
+export { default as TermsAccessibilitySection } from "./TermsAccessibilitySection";
+export { default as TermsSecurityPrivacySection } from "./TermsSecurityPrivacySection";
+export { default as TermsPerformanceSection } from "./TermsPerformanceSection";
+export { default as TermsSeoPublishingSection } from "./TermsSeoPublishingSection";
+export { default as TermsAcceptanceTestsSection } from "./TermsAcceptanceTestsSection";
+export { default as TermsStateMatrixSection } from "./TermsStateMatrixSection";
+export { default as TermsOwnershipRegisterSection } from "./TermsOwnershipRegisterSection";
+export { default as TermsFinalDecisionSection } from "./TermsFinalDecisionSection";
