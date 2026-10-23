@@ -142,6 +142,10 @@ const footerRoutes: Record<string, string> = {
   "Identity Guides": "/identity-guides",
   "Architecture Guides": "/architecture-guides",
   "Security Advisories": "/security-advisories",
+  "Enterprise": "/enterprise",
+  "Pricing overview": "/pricing-overview",
+  "Help & Support": "/help-support",
+  "Documentation": "/documentation",
   "Sitemap": "/support-accessibility-sitemap",
 };
 
