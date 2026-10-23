@@ -736,7 +736,7 @@ export default function Header() {
           {/* Right Actions */}
           <div className="flex shrink-0 items-center gap-4">
             <Link
-              href="#"
+              href="/documentation"
               className={`${navTextClass} whitespace-nowrap transition-colors duration-200 hover:text-cyan-49`}
             >
               Docs
@@ -883,7 +883,7 @@ export default function Header() {
               })}
 
               <Link
-                href="#"
+                href="/documentation"
                 onClick={closeMobile}
                 className={`${navTextClass} flex min-h-12 items-center border-b border-slate-900/10`}
               >

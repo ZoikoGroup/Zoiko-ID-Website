@@ -144,6 +144,8 @@ const footerRoutes: Record<string, string> = {
   "Security Advisories": "/security-advisories",
   "Enterprise": "/enterprise",
   "Pricing overview": "/pricing-overview",
+  "Help & Support": "/help-support",
+  "Documentation": "/documentation",
 };
 
 const offices = [
