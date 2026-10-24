@@ -146,6 +146,7 @@ const footerRoutes: Record<string, string> = {
   "Pricing overview": "/pricing-overview",
   "Help & Support": "/help-support",
   "Documentation": "/documentation",
+  "Accessibility": "/accessibility",
   "Sitemap": "/support-accessibility-sitemap",
 };
 

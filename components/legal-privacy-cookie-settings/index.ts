@@ -1,0 +1,15 @@
+export { default as CookieSettingsHeroSection } from "./CookieSettingsHeroSection";
+export { default as CookieSettingsChoicesSection } from "./CookieSettingsChoicesSection";
+export { default as CookieSettingsEquallyProminentSection } from "./CookieSettingsEquallyProminentSection";
+export { default as CookieSettingsPurposesSection } from "./CookieSettingsPurposesSection";
+export { default as CookieSettingsRegistryDetailsSection } from "./CookieSettingsRegistryDetailsSection";
+export { default as CookieSettingsChangeMindSection } from "./CookieSettingsChangeMindSection";
+export { default as CookieSettingsRegionalGuidanceSection } from "./CookieSettingsRegionalGuidanceSection";
+export { default as CookieSettingsReportedHonestlySection } from "./CookieSettingsReportedHonestlySection";
+export { default as CookieSettingsConfirmationCopySection } from "./CookieSettingsConfirmationCopySection";
+export { default as CookieSettingsRelatedNoticesSection } from "./CookieSettingsRelatedNoticesSection";
+export { default as CookieSettingsShortAnswersSection } from "./CookieSettingsShortAnswersSection";
+export { default as CookieSettingsChoicesLoggedSection } from "./CookieSettingsChoicesLoggedSection";
+export { default as CookieSettingsAccessibilitySection } from "./CookieSettingsAccessibilitySection";
+export { default as CookieSettingsPublicationBlockedSection } from "./CookieSettingsPublicationBlockedSection";
+export { default as CookieSettingsApprovedRouteSection } from "./CookieSettingsApprovedRouteSection";

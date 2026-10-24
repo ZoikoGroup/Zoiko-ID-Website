@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-manrope: var(--font-manrope-family);
   --font-dm-serif: var(--font-dm-serif-display-family);
+  --font-dm-serif-display: var(--font-dm-serif-display-family);
 
   /* Zoiko ID design tokens */
   --color-azure-8: #0a1520;
@@ -35,4 +36,9 @@ body {
   background: #ffffff;
   color: var(--foreground);
   font-family: var(--font-manrope-family), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+[class*="font-['DM_Serif_Display']"], .font-dm-serif, .font-dm-serif-display {
+  font-family: var(--font-dm-serif-display-family), "DM Serif Display", serif;
 }
