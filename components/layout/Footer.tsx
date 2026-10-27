@@ -148,6 +148,7 @@ const footerRoutes: Record<string, string> = {
   "Documentation": "/documentation",
   "Accessibility": "/accessibility",
   "Sitemap": "/support-accessibility-sitemap",
+  "European Headquarters":"/european-headquarters"
 };
 
 const offices = [
