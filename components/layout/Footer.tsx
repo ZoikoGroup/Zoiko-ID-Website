@@ -148,8 +148,40 @@ const footerRoutes: Record<string, string> = {
   "Documentation": "/documentation",
   "Accessibility": "/accessibility",
   "Sitemap": "/support-accessibility-sitemap",
-  "European Headquarters":"/european-headquarters"
+  "European Headquarters": "/european-headquarters",
+  "Platform & Usage Model": "/platform-usage-model",
+  "Talk to Sales": "/talk-to-sales",
+  "Zoiko Tech Inc.": "/zoiko-tech-inc",
+  "Careers": "/careers",
+  "Contact": "/contact",
+  "Headquarters": "/headquarters",
+  "Privacy Notice": "/privacy-notice",
+  "Terms of Use": "/legal-privacy-terms-of-use",
+  "Cookie Notice": "/legal-privacy-cookie-notice",
+  "Cookie Settings": "/legal-privacy-cookie-settings",
+  "Security": "/security",
+  "Machine & Agent Identity Guides": "/machine-agent-identity-guides",
 };
+
+// Extra bottom padding per column, from the Figma 4-column grid (desktop only)
+const columnPaddingBottom = [
+  "lg:pb-[86.44px]",
+  "lg:pb-[86.44px]",
+  "lg:pb-[43.22px]",
+  "lg:pb-[44.83px]",
+  "lg:pb-[86.44px]",
+  "lg:pb-[86.44px]",
+  "lg:pb-[64.83px]",
+  "lg:pb-[21.61px]",
+  "",
+  "lg:pb-[23.22px]",
+  "lg:pb-[21.61px]",
+  "lg:pb-[43.22px]",
+  "lg:pb-[23.22px]",
+  "lg:pb-[43.22px]",
+  "",
+  "",
+];
 
 const offices = [
   {
@@ -161,6 +193,12 @@ const offices = [
     lines: [
       "167–169 Great Portland Street, 5th Floor,",
       "London W1W 5PF, United Kingdom",
+    ],
+  },
+  {
+    title: "India Office",
+    lines: [
+      "No. 17, 2nd Floor, 7th Main Road Hoysala Nagar, Indiranagar, Bengaluru, Karnataka 560038, India",
     ],
   },
 ];
@@ -240,8 +278,8 @@ export default function Footer() {
           TOP FOOTER
       ========================================================= */}
       <section className="border-b border-white-solid/20">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-6 py-10 sm:px-10 lg:flex-row lg:items-start lg:justify-between lg:px-16 xl:px-28">
-          <div className="flex max-w-[639px] flex-col items-start gap-2">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-6 py-10 sm:px-10 lg:flex-row lg:items-start lg:justify-between lg:px-[105px]">
+          <div className="flex max-w-[639px] flex-col items-start gap-2 lg:w-[639px]">
             <Link href="/" aria-label="Zoiko ID home">
               <Image
                 src="/zoiko-id-logo-footer.webp"
@@ -252,12 +290,12 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-49">
+            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-49 lg:w-[610px] lg:whitespace-nowrap lg:text-[14.4px] lg:leading-normal lg:tracking-[1.152px]">
               Trusted Identity, Credentials &amp; Delegated Authority
               Infrastructure
             </p>
 
-            <p className="max-w-[619px] pt-2 text-base font-normal leading-6 text-white-solid/96">
+            <p className="max-w-[619px] pt-2 text-base font-normal leading-6 text-white-solid/96 lg:w-[619px] lg:pt-[7.155px] lg:text-[15.2px] lg:leading-[24.32px]">
               Programmable identity infrastructure for people, organizations,
               services, machines and AI agents—designed to establish identity,
               govern bounded authority, respond to changing trust signals and
@@ -266,8 +304,8 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="flex flex-wrap items-center gap-4 lg:pt-6">
-            <p className="pr-2 text-sm font-normal uppercase tracking-wide text-white-solid/96">
+          <div className="flex flex-wrap items-center gap-4 lg:w-[312px] lg:content-center lg:pt-6">
+            <p className="pr-2 text-sm font-normal uppercase tracking-wide text-white-solid/96 lg:text-[13.6px] lg:leading-normal lg:tracking-[1.088px]">
               Follow
             </p>
 
@@ -291,19 +329,22 @@ export default function Footer() {
           FOOTER NAVIGATION
       ========================================================= */}
       <section className="border-b border-white-solid/20">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-x-6 gap-y-12 px-6 py-12 sm:px-10 md:grid-cols-4 lg:gap-y-16 lg:px-16 xl:grid-cols-6 xl:gap-y-20 xl:px-28">
-          {footerColumns.map((column) => (
-            <div key={column.title} className="flex min-w-0 flex-col gap-5">
-              <h3 className="font-dm-serif text-sm font-normal capitalize tracking-tight text-white-solid">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-x-6 gap-y-12 px-6 py-12 sm:px-10 md:grid-cols-4 lg:gap-y-[36px] lg:px-[105px] lg:py-[48px]">
+          {footerColumns.map((column, index) => (
+            <div
+              key={column.title}
+              className={`flex min-w-0 flex-col gap-5 ${columnPaddingBottom[index] ?? ""}`}
+            >
+              <h3 className="font-dm-serif text-sm font-normal capitalize tracking-tight text-white-solid lg:text-[18px] lg:leading-normal lg:tracking-[0.288px]">
                 {column.title}
               </h3>
 
               <ul className="flex flex-col gap-3">
                 {column.links.map((link) => (
-                  <li key={link} className="pb-0.5 pt-[1.5px]">
+                  <li key={link} className="pb-0.5 pt-[1.5px] lg:pb-[2.11px]">
                     <Link
                       href={footerRoutes[link] ?? "#"}
-                      className="text-sm font-normal leading-5 text-white-solid/96 transition-colors duration-200 hover:text-cyan-49"
+                      className="text-sm font-normal leading-5 text-white-solid/96 transition-colors duration-200 hover:text-cyan-49 lg:text-[16px] lg:leading-[21.6px]"
                     >
                       {link}
                     </Link>
@@ -319,20 +360,22 @@ export default function Footer() {
           OFFICES
       ========================================================= */}
       <section className="border-b border-white-solid/20">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-6 py-10 sm:px-10 md:flex-row lg:px-16 xl:px-28">
-          {offices.map((office) => (
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-6 py-10 sm:px-10 md:flex-row lg:px-[105px]">
+          {offices.map((office, index) => (
             <address
               key={office.title}
-              className="flex flex-1 flex-col gap-2 pl-4 not-italic md:pb-6"
+              className={`flex min-w-0 flex-1 flex-col gap-2 pl-4 not-italic md:pb-6 lg:pb-0 ${
+                index === 0 ? "lg:pb-[23.05px]" : "lg:min-h-[96px]"
+              }`}
             >
-              <p className="text-sm font-bold uppercase tracking-wider text-cyan-49">
+              <p className="text-sm font-bold uppercase tracking-wider text-cyan-49 lg:text-[13.6px] lg:leading-normal lg:tracking-[1.36px]">
                 {office.title}
               </p>
-              <p className="text-sm font-normal leading-6 text-white-solid/96">
-                {office.lines.map((line, index) => (
+              <p className="whitespace-pre-wrap text-sm font-normal leading-6 text-white-solid/96 lg:text-[14.4px] lg:leading-[23px]">
+                {office.lines.map((line, lineIndex) => (
                   <span key={line}>
                     {line}
-                    {index < office.lines.length - 1 && <br />}
+                    {lineIndex < office.lines.length - 1 && <br />}
                   </span>
                 ))}
               </p>
@@ -344,14 +387,14 @@ export default function Footer() {
       {/* =========================================================
           BOTTOM FOOTER
       ========================================================= */}
-      <section>
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-4 px-6 py-6 sm:px-10 lg:px-16 xl:px-28">
-          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm font-normal leading-5 text-white-solid/96">
+      <section className="bg-[rgba(7,20,38,0.02)]">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-4 px-6 py-6 sm:px-10 lg:gap-[16.01px] lg:px-[125px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-sm font-normal leading-5 text-white-solid/96 lg:text-[13.6px] lg:leading-[19px]">
             <p>Zoiko iD is a Zoiko Tech Inc. platform.</p>
             <p>© 2026 Zoiko Tech Inc. All rights reserved.</p>
           </div>
 
-          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm lg:gap-3 font-normal leading-5 text-white-solid/96">
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-normal leading-5 text-white-solid/96 lg:gap-3 lg:text-[13.6px] lg:leading-[19px]">
             {legalLinks.map((link, index) => (
               <li key={link} className="flex items-center gap-3">
                 {index > 0 && (
@@ -361,7 +404,7 @@ export default function Footer() {
                   </span>
                 )}
                 <Link
-                  href="#"
+                  href={footerRoutes[link] ?? "#"}
                   className="transition-colors duration-200 hover:text-cyan-49"
                 >
                   {link}
