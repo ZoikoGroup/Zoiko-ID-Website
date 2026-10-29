@@ -62,7 +62,7 @@ const platformMenu: MegaMenu = {
       heading: "Build & Connect",
       links: [
         { label: "APIs & Integrations", href: "/apis-integrations" },
-        { label: "Standards & Interoperability", href: "#" },
+        { label: "Standards & Interoperability", href: "/standards-interoperability" },
         { label: "Architecture Overview", href: "#" },
         { label: "Evidence & Audit", href: "/reports" },
       ],

@@ -1,0 +1,17 @@
+export { default as ResponsibleAiHeroSection } from "./ResponsibleAiHeroSection";
+export { default as IdentityAuthorityEvidenceSection } from "./IdentityAuthorityEvidenceSection";
+export { default as SponsorToEvidenceChainSection } from "./SponsorToEvidenceChainSection";
+export { default as AgentStandingPermissionsSection } from "./AgentStandingPermissionsSection";
+export { default as FiveEntitiesOneJobSection } from "./FiveEntitiesOneJobSection";
+export { default as MandateScopedSection } from "./MandateScopedSection";
+export { default as HumanApprovalEvaluationSection } from "./HumanApprovalEvaluationSection";
+export { default as ThreeBranchesDecisionSection } from "./ThreeBranchesDecisionSection";
+export { default as CredentialsLifecycleSection } from "./CredentialsLifecycleSection";
+export { default as TrustRevocationTimingSection } from "./TrustRevocationTimingSection";
+export { default as DecisionRecordTableSection } from "./DecisionRecordTableSection";
+export { default as ProtectedByRoleBannerSection } from "./ProtectedByRoleBannerSection";
+export { default as AiIncidentRoutingSection } from "./AiIncidentRoutingSection";
+export { default as DiscussAgentGovernanceSection } from "./DiscussAgentGovernanceSection";
+export { default as EveryStateNamedSection } from "./EveryStateNamedSection";
+export { default as ResponsibleAiFaqSection } from "./ResponsibleAiFaqSection";
+export { default as ResponsibleAiPublicationGatesSection } from "./ResponsibleAiPublicationGatesSection";
