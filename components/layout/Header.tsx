@@ -749,7 +749,7 @@ export default function Header() {
               Sign in
             </Link>
 
-            <Link href="#" className={primaryButtonClass}>
+            <Link href="/talk-to-an-expert" className={primaryButtonClass}>
               Talk to an expert
             </Link>
           </div>
@@ -767,7 +767,7 @@ export default function Header() {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Link href="#" className={`${primaryButtonClass} hidden sm:flex`}>
+            <Link href="/talk-to-an-expert" className={`${primaryButtonClass} hidden sm:flex`}>
               Talk to an expert
             </Link>
 
@@ -899,7 +899,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="#"
+                href="/talk-to-an-expert"
                 onClick={closeMobile}
                 className={`${primaryButtonClass} mt-5 sm:hidden`}
               >
