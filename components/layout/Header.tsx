@@ -53,9 +53,9 @@ const platformMenu: MegaMenu = {
     {
       heading: "Authority & Trust",
       links: [
-        { label: "Authorization & Delegation", href: "#" },
-        { label: "Machine & Agent Identity", href: "#" },
-        { label: "Continuous Trust & Revocation", href: "#" },
+        { label: "Authorization & Delegation", href: "/authorization-delegated-authority" },
+        { label: "Machine & Agent Identity", href: "/machine-agent-identity" },
+        { label: "Continuous Trust & Revocation", href: "/continuous-trust" },
       ],
     },
     {
@@ -131,7 +131,7 @@ const developersMenu: MegaMenu = {
       links: [
         { label: "Developer overview", href: "/overview" },
         { label: "Quickstarts", href: "/quickstarts" },
-        { label: "API Reference", href: "#" },
+        { label: "API Reference", href: "/api-reference" },
         { label: "SDKs", href: "#" },
       ],
     },
@@ -139,7 +139,7 @@ const developersMenu: MegaMenu = {
       heading: "Integrate & Operate",
       links: [
         { label: "Webhooks & Events", href: "/webhooks-events" },
-        { label: "Integrations", href: "#" },
+        { label: "Integrations", href: "/integrations-operate" },
         { label: "Sandbox", href: "/sandbox" },
         { label: "Changelog", href: "/changelog" },
       ],
@@ -149,8 +149,8 @@ const developersMenu: MegaMenu = {
       links: [
         { label: "Authentication guide", href: "#" },
         { label: "Delegated authority guide", href: "#" },
-        { label: "Machine & agent identity", href: "#" },
-        { label: "Architecture patterns", href: "#" },
+        { label: "Machine & agent identity", href: "/machine-agent-identity-guides" },
+        { label: "Architecture patterns", href: "/development-technical-guide-architecture-pattern" },
       ],
     },
   ],
@@ -158,7 +158,7 @@ const developersMenu: MegaMenu = {
     title: "Start building with Zoiko iD",
     description:
       "Quick-start flows, API reference, SDKs for Python, Node.js, Go, Java and more.",
-    cta: { label: "Read the Quick Start →", href: "#" },
+    cta: { label: "Read the Quick Start →", href: "/quickstarts" },
     image: {
       src: "/dropdowns/developers-quick-start.webp",
       alt: "Developers working together at laptops",
@@ -174,17 +174,17 @@ const trustMenu: MegaMenu = {
     {
       heading: "Assurance",
       links: [
-        { label: "Security", href: "#" },
-        { label: "Privacy", href: "#" },
-        { label: "Compliance & Standards", href: "#" },
+        { label: "Security", href: "/security" },
+        { label: "Privacy", href: "/trust-assurance-privacy" },
+        { label: "Compliance & Standards", href: "/assurance-compliance-standards" },
       ],
     },
     {
       heading: "Operations",
       links: [
         { label: "Trust Center", href: "/trust-center" },
-        { label: "Availability / Status", href: "#" },
-        { label: "Security Advisories", href: "#" },
+        { label: "Availability / Status", href: "/availability-status" },
+        { label: "Security Advisories", href: "/security-advisories" },
       ],
     },
     {
@@ -214,7 +214,7 @@ const resourcesMenu: MegaMenu = {
       links: [
         { label: "Identity Guides", href: "/identity-guides" },
         { label: "Delegated Authority Explainers", href: "/authority-explainers" },
-        { label: "Machine & Agent Guides", href: "#" },
+        { label: "Machine & Agent Guides", href: "/machine-agent-identity-guides" },
       ],
     },
     {
@@ -237,7 +237,7 @@ const resourcesMenu: MegaMenu = {
     title: "What is delegated authority?",
     description:
       "Learn how to establish who can act for whom, under what limits, and for how long.",
-    cta: { label: "Read the explainer →", href: "#" },
+    cta: { label: "Read the explainer →", href: "/authority-explainers" },
     image: {
       src: "/dropdowns/resources-delegated-authority.webp",
       alt: "Student reading a book in a library",
@@ -254,12 +254,12 @@ const pricingMenu: MegaMenu = {
       links: [
         { label: "Pricing overview", href: "/pricing-overview" },
         { label: "Enterprise", href: "/enterprise" },
-        { label: "Platform & usage model", href: "#" },
+        { label: "Platform & usage model", href: "/platform-usage-model" },
       ],
     },
   ],
   feature: {
-    cta: { label: "Talk to Sales →", href: "#" },
+    cta: { label: "Talk to Sales →", href: "/talk-to-sales" },
   },
 };
 
