@@ -132,7 +132,7 @@ const footerRoutes: Record<string, string> = {
   "Developer overview": "/overview",
   "Webhooks & Events": "/webhooks-events",
   "Evidence & Audit": "/reports",
-  "Compliance & Standards": "/reports",
+  "Compliance & Standards": "/assurance-compliance-standards",
   "Delegated Third-Party Access": "/third-party-access",
   "Verified Onboarding": "/solutions-verified-onboarding",
   "Regulated Services": "/solutions-regulated-services",
@@ -161,6 +161,17 @@ const footerRoutes: Record<string, string> = {
   "Cookie Settings": "/legal-privacy-cookie-settings",
   "Security": "/security",
   "Machine & Agent Identity Guides": "/machine-agent-identity-guides",
+  "API Reference": "/api-reference",
+  "Integrations": "/integrations-operate",
+  "Privacy": "/trust-assurance-privacy",
+  "Trust Center": "/trust-center",
+  "Availability / Status": "/availability-status",
+  "Security contact": "/security-contact",
+  "Media / Press": "/media-press",
+  "Procurement / Enterprise": "/procurement-enterprise",
+  "Authorization & Delegated Authority": "/authorization-delegated-authority",
+  "Machine & Agent Identity": "/machine-agent-identity",
+  "Continuous Trust & Revocation": "/continuous-trust",
 };
 
 // Extra bottom padding per column, from the Figma 4-column grid (desktop only)
