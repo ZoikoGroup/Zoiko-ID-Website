@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   title: "Zoiko iD | Enterprise Identity & Access Infrastructure",
   description:
     "Global regulatory intelligence and continuous assurance.",
+  verification: {
+    google: "-rvwBtrkzYnX1HM0_nunHvvfyCiieohbEWph_uM7qJg",
+  },
 };
 
 export default function RootLayout({
