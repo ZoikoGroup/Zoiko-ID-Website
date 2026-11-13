@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import {
   DM_Serif_Display,
   Geist,
@@ -10,6 +11,7 @@ import "./globals.css";
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AssistantMount from "@/components/assistant/AssistantMount";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +64,10 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        <Suspense fallback={null}>
+          <AssistantMount />
+        </Suspense>
       </body>
     </html>
   );
