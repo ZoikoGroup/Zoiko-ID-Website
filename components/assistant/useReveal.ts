@@ -26,9 +26,12 @@ export function useReveal(text: string, enabled: boolean, onDone?: () => void): 
     }
     const total = Math.min(MAX_MS, (text.length / RATE) * 1000);
     const rate = total > 0 ? text.length / total : 1; // chars per ms
-    const start = performance.now();
+    // Elapsed time comes from the animation frames' own timestamps only. Mixing them with performance.now() assumed one clock: a browser has one,
+    // but jsdom's frame timestamps start at the window's creation, so the reveal looked frozen for as long as the test worker had been running.
+    let start: number | undefined;
     let raf = 0;
     const step = (now: number) => {
+      start ??= now;
       const n = Math.min(text.length, Math.floor((now - start) * rate));
       setCount(n);
       if (n < text.length) raf = requestAnimationFrame(step);
