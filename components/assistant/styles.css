@@ -41,38 +41,37 @@
 
 /* ---------------------------------------------------------------- launcher */
 .zpa-launcher {
-  display: inline-grid; place-items: center; width: 54px; height: 54px; padding: 0; border: 0; border-radius: 16px; background: transparent; cursor: pointer;
+  display: inline-grid; place-items: center; width: 60px; height: 60px; padding: 0; border: 0; border-radius: 18px; background: transparent; cursor: pointer;
   box-shadow: 0 10px 28px rgba(10, 31, 77, 0.35); transition: transform 120ms ease-out;
 }
 .zpa-launcher:hover { transform: scale(1.05); }
-.zpa-launcher-mark { display: inline-grid; place-items: center; width: 54px; height: 54px; border-radius: 16px; overflow: hidden; background: var(--zpa-navy); color: #fff; font-size: 30px; }
+.zpa-launcher-mark { display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 18px; overflow: hidden; background: var(--zpa-navy); color: #fff; font-size: 30px; }
 .zpa-launcher-mark svg { width: 100%; height: 100%; }
 
 /* ---------------------------------------------------------------- panel and header */
 .zpa-panel {
-  position: absolute; right: 0; bottom: 70px; display: flex; flex-direction: column;
+  position: absolute; right: 0; bottom: 76px; display: flex; flex-direction: column;
   width: min(440px, calc(100vw - 32px)); height: min(720px, calc(100dvh - 96px));
   background: var(--zpa-bg); border-radius: 22px; box-shadow: 0 24px 64px rgba(10, 31, 77, 0.34); overflow: hidden;
 }
 .zpa-panel.zpa-panel-max { width: min(820px, calc(100vw - 32px)); height: min(900px, calc(100dvh - 96px)); }
 .zpa-icon-btn.zpa-size-btn { display: inline-grid; }
 @media (max-width: 480px) { .zpa-icon-btn.zpa-size-btn { display: none; } }
-.zpa-header { display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 14px; background: linear-gradient(135deg, var(--zpa-navy), var(--zpa-navy-2)); color: #fff; }
-.zpa-logo { display: inline-grid; place-items: center; width: 36px; height: 36px; flex: none; border-radius: 10px; background: #fff; color: var(--zpa-navy); font-size: 18px; overflow: hidden; }
+.zpa-header { display: flex; align-items: center; gap: 10px; padding: 12px 12px 12px 16px; background: linear-gradient(135deg, var(--zpa-navy), var(--zpa-navy-2)); color: #fff; }
+.zpa-logo { display: inline-grid; place-items: center; width: 38px; height: 38px; flex: none; border-radius: 10px; background: #fff; color: var(--zpa-navy); font-size: 18px; overflow: hidden; }
 .zpa-logo > svg:not(.zpa-icon) { width: 100%; height: 100%; }
-/* name and live status share the first row; the subtitle sits under them */
-.zpa-head-text { flex: 1; min-width: 0; display: grid; grid-template-columns: minmax(0, auto) 1fr; column-gap: 8px; align-items: center; }
-.zpa-head-text h2 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.zpa-status { margin: 0; display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #7ff0dc; white-space: nowrap; }
-.zpa-subtitle { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 1px 0 0; font-size: 12px; color: #c9d6f0; }
+.zpa-head-text { flex: 1; min-width: 0; }
+.zpa-head-text h2 { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.2; }
+.zpa-status { margin: 2px 0 0; display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #7ff0dc; }
+.zpa-subtitle { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 1px 0 0; font-size: 12px; color: #c9d6f0; }
 .zpa-dot { width: 8px; height: 8px; border-radius: 50%; background: #9aa7bd; flex: none; }
 .zpa-dot-on { background: #34d399; box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.25); }
 .zpa-dot-wait { background: #f5c542; }
 .zpa-dot-off { background: #9aa7bd; }
-.zpa-header-actions { display: flex; align-items: center; gap: 0; flex: none; }
-.zpa-icon-btn { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; color: #fff; cursor: pointer; font-size: 17px; }
+.zpa-header-actions { display: flex; align-items: center; gap: 2px; }
+.zpa-icon-btn { display: inline-grid; place-items: center; width: 32px; height: 32px; border: 0; border-radius: 8px; background: transparent; color: #fff; cursor: pointer; font-size: 16px; }
 .zpa-icon-btn:hover { background: rgba(255, 255, 255, 0.14); }
-.zpa-banner { margin: 0; padding: 5px 14px; background: var(--zpa-warn-bg); color: var(--zpa-warn-fg); font-size: 13px; }
+.zpa-banner { margin: 0; padding: 8px 18px; background: var(--zpa-warn-bg); color: var(--zpa-warn-fg); font-size: 13px; }
 
 .zpa-body { display: flex; flex-direction: column; flex: 1; min-height: 0; }
 .zpa-pad { padding: 18px; }
@@ -91,7 +90,7 @@
 .zpa-logo-card { width: 52px; height: 52px; border: 1px solid var(--zpa-line); }
 .zpa-welcome-body { margin: 2px 0 0; color: var(--zpa-muted); font-size: 16px; }
 .zpa-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.zpa-tile { display: flex; align-items: center; gap: 8px; padding: 8px 10px; text-align: left; border: 1px solid var(--zpa-line); border-radius: 12px; background: var(--zpa-surface); color: var(--zpa-fg); cursor: pointer; font: inherit; min-height: 56px; }
+.zpa-tile { display: flex; align-items: center; gap: 8px; padding: 10px; text-align: left; border: 1px solid var(--zpa-line); border-radius: 14px; background: var(--zpa-surface); color: var(--zpa-fg); cursor: pointer; font: inherit; min-height: 64px; }
 .zpa-tile:hover { border-color: var(--zpa-blue); box-shadow: 0 4px 14px rgba(26, 95, 224, 0.12); }
 .zpa-tile-icon { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 11px; font-size: 20px; }
 .zpa-tone-blue { background: var(--zpa-sky); color: var(--zpa-sky-fg); }
@@ -101,7 +100,7 @@
 .zpa-tile-text span { font-size: 11.5px; color: var(--zpa-muted); line-height: 1.3; }
 .zpa-tile-chev { display: none; }
 .zpa-starters { display: flex; flex-wrap: wrap; gap: 8px; }
-.zpa-chip { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--zpa-line); background: var(--zpa-surface); color: var(--zpa-fg); font: inherit; font-weight: 500; font-size: 13px; cursor: pointer; }
+.zpa-chip { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--zpa-line); background: var(--zpa-surface); color: var(--zpa-fg); font: inherit; font-weight: 500; font-size: 14px; cursor: pointer; }
 .zpa-chip:hover { border-color: var(--zpa-blue); color: var(--zpa-link); }
 .zpa-chip-icon .zpa-icon { color: var(--zpa-blue); }
 .zpa-scope { margin: 2px 0 0; }
@@ -157,12 +156,12 @@
 .zpa-inputbox:focus-within { border-color: var(--zpa-blue); }
 .zpa-inputbox .zpa-inputbox textarea, .zpa-panel .zpa-inputbox textarea { box-shadow: none; flex: 1; width: auto; min-height: 36px; max-height: 120px; padding: 7px 0; border: 0; background: transparent; color: var(--zpa-fg); font: inherit; resize: none; outline: none; }
 .zpa-inputbox textarea::placeholder { color: var(--zpa-muted); }
-.zpa-send { display: inline-grid; place-items: center; width: 40px; height: 40px; flex: none; border: 0; border-radius: 50%; background: linear-gradient(135deg, var(--zpa-teal), var(--zpa-teal-2)); color: #fff; cursor: pointer; font-size: 18px; box-shadow: 0 4px 12px rgba(11, 127, 141, 0.35); }
+.zpa-send { display: inline-grid; place-items: center; width: 46px; height: 46px; flex: none; border: 0; border-radius: 50%; background: linear-gradient(135deg, var(--zpa-teal), var(--zpa-teal-2)); color: #fff; cursor: pointer; font-size: 21px; box-shadow: 0 4px 12px rgba(11, 127, 141, 0.35); }
 .zpa-send[disabled] { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
 .zpa-count { position: absolute; right: 24px; top: -4px; font-size: 11px; color: var(--zpa-muted); background: var(--zpa-surface); padding: 0 4px; }
 .zpa-privacy { margin: 0; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: var(--zpa-muted); text-align: center; }
 .zpa-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 18px; margin: 6px 16px 14px; padding-top: 10px; border-top: 1px solid var(--zpa-line); }
-.zpa-foot-link { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 6px; color: var(--zpa-link); font: inherit; font-size: 13.5px; font-weight: 600; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
+.zpa-foot-link { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 6px; color: var(--zpa-link); font: inherit; font-size: 14px; font-weight: 600; text-decoration: none; background: transparent; border: 0; cursor: pointer; }
 .zpa-foot-link:hover { text-decoration: underline; }
 .zpa-foot-btn { color: var(--zpa-muted); font-weight: 500; }
 
@@ -178,12 +177,12 @@
 .zpa-check input { width: 24px; height: 24px; margin-top: 2px; flex: none; }
 .zpa-notice { padding: 8px 10px; border: 1px solid var(--zpa-line); border-radius: 8px; background: var(--zpa-soft); font-size: 13px; }
 .zpa-reference { margin: 0; font-size: 18px; }
-.zpa-view > .zpa-btn { align-self: flex-start; }
 .zpa-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .zpa-composer-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.zpa-view > .zpa-btn { align-self: flex-start; }
 .zpa-btn {
-  display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 0 14px;
-  border-radius: 10px; border: 1px solid var(--zpa-btn-line); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 16px;
+  border-radius: 10px; border: 1px solid var(--zpa-btn-line); font: inherit; font-weight: 600; cursor: pointer; text-decoration: none;
 }
 .zpa-btn-primary { background: var(--zpa-btn-bg); border-color: var(--zpa-btn-bg); color: #fff; }
 .zpa-btn-secondary { background: var(--zpa-surface); color: var(--zpa-ink); }
@@ -196,11 +195,9 @@
   .zpa-root { right: 8px; bottom: 8px; }
   .zpa-root { right: max(8px, env(safe-area-inset-right)); bottom: max(8px, env(safe-area-inset-bottom)); }
   .zpa-panel { position: fixed; top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); bottom: max(8px, env(safe-area-inset-bottom)); left: max(8px, env(safe-area-inset-left)); width: auto; height: auto; border-radius: 18px; }
-  .zpa-icon-btn { min-width: 34px; min-height: 34px; }
   .zpa-tiles { grid-template-columns: 1fr; }
   .zpa-stack { max-width: 88%; }
 }
-
 @media (forced-colors: active) {
   .zpa-launcher, .zpa-btn, .zpa-chip, .zpa-tile, .zpa-send { border: 2px solid ButtonText; }
 }
@@ -210,7 +207,7 @@
 .zpa-history { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .zpa-history-row { display: flex; align-items: stretch; gap: 6px; }
 .zpa-history-row .zpa-history-item { flex: 1; min-width: 0; width: auto; }
-.zpa-history-del { display: inline-grid; place-items: center; width: 40px; flex: none; border: 1px solid var(--zpa-line); border-radius: 12px; background: var(--zpa-surface); color: var(--zpa-muted); cursor: pointer; font-size: 17px; }
+.zpa-history-del { display: inline-grid; place-items: center; width: 44px; flex: none; border: 1px solid var(--zpa-line); border-radius: 12px; background: var(--zpa-surface); color: var(--zpa-muted); cursor: pointer; font-size: 17px; }
 .zpa-history-del:hover { border-color: var(--zpa-err-fg); color: var(--zpa-err-fg); background: var(--zpa-err-bg); }
 .zpa-history-item { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px; text-align: left; border: 1px solid var(--zpa-line); border-radius: 12px; background: var(--zpa-surface); color: var(--zpa-fg); cursor: pointer; font: inherit; }
 .zpa-history-item:hover { border-color: var(--zpa-blue); }

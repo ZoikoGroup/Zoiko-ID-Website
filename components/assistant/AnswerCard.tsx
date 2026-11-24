@@ -59,7 +59,6 @@ export function AnswerCard({ packet, client, flags, onHandoff, logo, time, anima
     }
   }
 
-  // WF-02: one recommended action and at most two supplementary ones
   const actions = packet.actions.flatMap((a, i) => {
     if (a.type === "OPEN_APPROVED_LINK" && a.link_id) {
       return [
@@ -84,7 +83,7 @@ export function AnswerCard({ packet, client, flags, onHandoff, logo, time, anima
       ];
     }
     return []; // any other action type is not approved for display
-  }).slice(0, 3);
+  }).slice(0, 3); // WF-02: one recommended action and at most two supplementary ones
 
   return (
     <div className="zpa-row zpa-row-bot">
@@ -93,8 +92,9 @@ export function AnswerCard({ packet, client, flags, onHandoff, logo, time, anima
         <article className={`zpa-bubble zpa-bubble-bot zpa-decision-${packet.decision.toLowerCase()}`} aria-label={`Assistant reply: ${label}`}>
           {packet.decision !== "ANSWER" ? <p className="zpa-badge">{label}</p> : null}
           <p className="zpa-answer"><Flow text={packet.answer_text} animate={animate} onDone={() => { setSettled(true); onRevealed?.(); }} /></p>
-          {actions.length > 0 ? <div className={`zpa-actions zpa-settle${settled ? " zpa-settled" : ""}`}>{actions}</div> : null}
           {packet.decision === "ANSWER" && packet.citations.length === 0 ? <p className="zpa-muted zpa-unverified">{COPY.notVerified}</p> : null}
+          {packet.safety.sample_content ? <p className="zpa-sample">{COPY.sample}</p> : null}
+          {actions.length > 0 ? <div className={`zpa-actions zpa-settle${settled ? " zpa-settled" : ""}`}>{actions}</div> : null}
           {packet.citations.length > 0 ? (
             <div className={`zpa-sources zpa-settle${settled ? " zpa-settled" : ""}`}>
               <span className="zpa-small-heading">{COPY.sourcesHeading}: </span>

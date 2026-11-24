@@ -8,7 +8,7 @@ import { AnswerCard } from "./AnswerCard";
 import { AssistantApiError, createAssistantClient, DEFAULT_API_BASE } from "./client";
 import { COPY as BASE_COPY, DEFAULT_AUDIENCES, type Audience } from "./copy";
 import { trapTab, uuid } from "./focus";
-import { ChatIcon, ChevronRightIcon, ClockIcon, CloseIcon, ExpandIcon, LockIcon, MinusIcon, MoonIcon, NamedIcon, PlusIcon, SendIcon, ShieldCheckIcon, ShrinkIcon, SunIcon, TrashIcon, UserIcon, toneFor } from "./icons";
+import { ArrowRightIcon, ChatIcon, ChevronRightIcon, ClockIcon, CloseIcon, ExpandIcon, LockIcon, MinusIcon, MoonIcon, NamedIcon, PlusIcon, SendIcon, ShieldCheckIcon, ShrinkIcon, SunIcon, TrashIcon, UserIcon, toneFor } from "./icons";
 import { HelpLinks, Intake } from "./Intake";
 import type { AnswerPacket, Bootstrap, HandoffPurpose, IntakeConfig, IntakePurposeConfig } from "./types";
 import "./styles.css";
@@ -98,7 +98,7 @@ export function AssistantWidget({ apiBase = DEFAULT_API_BASE, locale = "en-US", 
 
   // small screens: the panel is full-height, so the page behind it must not scroll
   useEffect(() => {
-    if (!open || typeof window === "undefined" || !window.matchMedia("(max-width: 480px)").matches) return undefined;
+    if (!open || typeof window === "undefined" || typeof window.matchMedia !== "function" || !window.matchMedia("(max-width: 480px)").matches) return undefined;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
@@ -202,6 +202,18 @@ export function AssistantWidget({ apiBase = DEFAULT_API_BASE, locale = "en-US", 
 
   function cancelPending() {
     abortRef.current?.abort();
+  }
+
+  async function forget() {
+    try {
+      await client.deleteSession();
+    } catch {
+      /* the local state is cleared regardless; the server session also expires on its own */
+    }
+    hasSession.current = false;
+    setView({ name: "chat" });
+    setDraft("");
+    setMsgs([{ id: uuid(), at: Date.now(), kind: "notice", tone: "info", text: COPY.forgotten, help: false }]);
   }
 
   /** New chat: the current conversation moves to this window's history, the server session is deleted and the next question starts fresh. */
@@ -513,7 +525,7 @@ export function AssistantWidget({ apiBase = DEFAULT_API_BASE, locale = "en-US", 
                     <span>{data?.notice}</span>
                   </p>
                 </form>
-                {footerLinks.length > 0 ? (
+                {footerLinks.length > 0 || (msgs.length > 0 && chatOn) ? (
                   <nav className="zpa-footer" aria-label="More help">
                     {footerLinks.map((l, i) => (
                       <a key={l.link_id} className="zpa-foot-link" href={client.linkUrl(l.link_id)} target="_blank" rel="noopener noreferrer">
@@ -521,6 +533,12 @@ export function AssistantWidget({ apiBase = DEFAULT_API_BASE, locale = "en-US", 
                         {l.label}
                       </a>
                     ))}
+                    {msgs.length > 0 ? (
+                      <button type="button" className="zpa-foot-link zpa-foot-btn" onClick={() => void forget()}>
+                        <ArrowRightIcon />
+                        {COPY.forget}
+                      </button>
+                    ) : null}
                   </nav>
                 ) : null}
               </>
